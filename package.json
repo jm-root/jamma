@@ -1,0 +1,64 @@
+{
+  "name": "jamma",
+  "version": "0.0.1",
+  "description": "jamma",
+  "main": "./lib/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "standardx",
+    "lint:fix": "standardx --fix"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "standardx": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jm-root/jamma.git"
+  },
+  "keywords": [
+    "javascript",
+    "jamma"
+  ],
+  "author": {
+    "name": "Jeff YU"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jm-root/jamma/issues"
+  },
+  "homepage": "https://github.com/jm-root/jamma",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "jm-log4js": "^2.0.5",
+    "log4js": "^6.9.1",
+    "path-to-regexp": "^6.2.2",
+    "proxy-addr": "^2.0.7",
+    "qs": "^6.12.1",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.5",
+    "lodash": "^4.17.21",
+    "standardx": "^7.0.0"
+  }
+}
