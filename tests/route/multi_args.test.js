@@ -1,5 +1,5 @@
 import Route from '../../lib/ms/route'
-import { isEqual } from 'lodash'
+import _ from 'lodash'
 
 const name = 'jeff'
 const age = 18
@@ -13,18 +13,18 @@ const fnFilter = (opts) => {
   Object.assign(opts, { gender })
 }
 
-describe('multi args', async () => {
+describe('multi args', () => {
   test('one function', async () => {
     const o = new Route(fn)
     const doc = await o.execute({}, age)
     console.log(doc)
-    expect(isEqual(doc, { name, age })).toBeTruthy()
+    expect(_.isEqual(doc, { name, age })).toBeTruthy()
   })
 
   test('chain', async () => {
     const o = new Route([fnFilter, fn])
     const doc = await o.execute({}, age)
     console.log(doc)
-    expect(isEqual(doc, { name, age, gender })).toBeTruthy()
+    expect(_.isEqual(doc, { name, age, gender })).toBeTruthy()
   })
 })

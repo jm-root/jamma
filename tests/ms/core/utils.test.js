@@ -1,4 +1,4 @@
-import { isEqual } from 'lodash'
+import _ from 'lodash'
 import utils from '../../../lib/ms/core/utils'
 
 const $ = utils
@@ -37,7 +37,7 @@ describe('utils', () => {
     const fn1 = opts => opts
 
     function check (obj1, obj2) {
-      const ret = isEqual(obj1, obj2)
+      const ret = _.isEqual(obj1, obj2)
       if (!ret) {
         console.dir(obj1, obj2)
       }

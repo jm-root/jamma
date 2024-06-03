@@ -14,7 +14,7 @@ const fnFilter = async opts => {
   })
 }
 
-describe('debug', async () => {
+describe('debug', () => {
   test('chain', async () => {
     const o = new Route([fnFilter, fn])
     o.name = 'test'

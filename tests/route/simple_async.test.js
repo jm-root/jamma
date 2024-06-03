@@ -9,7 +9,7 @@ const fn = async (opts) => {
   })
 }
 
-describe('simple async', async () => {
+describe('simple async', () => {
   test('one function', async () => {
     const o = new Route(fn)
     const doc = await o.execute({})

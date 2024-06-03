@@ -44,7 +44,7 @@ describe('ms', () => {
       })
   })
 
-  test('router use', () => {
+  test('router use', async () => {
     const r1 = ms.router()
     r1.add('/', 'get', () => { return { ret: 1 } })
     const r2 = ms.router()
@@ -53,12 +53,9 @@ describe('ms', () => {
       .clear()
       .use(r1)
       .use('/r2', r2)
-      .get('/r2')
-      .then(function () {
-      })
-      .catch(function (err) {
-        console.log(err)
-      })
+
+    const doc = await app.get('/r2')
+    console.log(doc)
   })
 
   test('use', () => {

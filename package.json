@@ -1,6 +1,6 @@
 {
   "name": "jamma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "jamma",
   "main": "./lib/index.js",
   "type": "module",
@@ -24,8 +24,7 @@
     "env": [
       "jest"
     ],
-    "ignore": [
-    ]
+    "ignore": []
   },
   "repository": {
     "type": "git",
