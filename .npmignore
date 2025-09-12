@@ -5,4 +5,6 @@
 bench
 tests
 examples
+docs
+lib
 yarn.lock
