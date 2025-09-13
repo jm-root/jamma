@@ -3,7 +3,7 @@ import MS from '../../../lib/ms/core'
 
 const client = mdl.adapter
 const ms = new MS()
-const uri = 'http://api.jamma.cn'
+const uri = 'https://api.jamma.cn'
 describe('client', () => {
   test('adapter', async () => {
     const $ = await client(uri)

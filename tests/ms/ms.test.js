@@ -6,7 +6,7 @@ router.use(opts => {
   return opts
 })
 
-const uri = 'http://api.jamma.cn'
+const uri = 'https://api.jamma.cn'
 describe('ms', () => {
   test('server', async () => {
     const doc = await ms.server(router, { type: 'http', port: 3000 })

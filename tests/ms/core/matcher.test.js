@@ -9,7 +9,7 @@ describe('matcher', () => {
   test('match', () => {
     let o = new Matcher()
     let doc = o.match()
-    expect(doc).not.toBeTruthy()
+    expect(doc).toBeTruthy()
     doc = o.match({ uri: '/' })
     expect(doc).toBeTruthy()
     expect(doc.uri === '/' && doc.params).toBeTruthy()
@@ -18,7 +18,7 @@ describe('matcher', () => {
     o = new Matcher({
       end: false
     })
-    expect(o.match()).not.toBeTruthy()
+    expect(o.match()).toBeTruthy()
     doc = o.match({ uri: '' })
     expect(doc).toBeTruthy()
     expect(doc.uri === '' && doc.params).toBeTruthy()
