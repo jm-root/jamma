@@ -8,3 +8,4 @@ examples
 docs
 lib
 yarn.lock
+rollup.config.js

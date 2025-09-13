@@ -1,11 +1,10 @@
 {
   "name": "jamma",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "jamma",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "browser": "./dist/browser.esm.js",
-  "type": "module",
   "scripts": {
     "build": "npx rollup -c rollup.config.js",
     "test": "jest",
