@@ -1,6 +1,6 @@
 {
   "name": "jamma",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "jamma",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
